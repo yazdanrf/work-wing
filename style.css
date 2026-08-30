@@ -312,42 +312,4 @@ body {
     .nav-links { display: none; position: absolute; top: 68px; left: 0; width: 100%; background: #FFFFFF; flex-direction: column; padding: 1.5rem; }
     .nav-links.active { display: flex; }
     .footer-grid { grid-template-columns: 1fr; }
-
-    /* 3D Interactive Button */
-.btn-3d {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 28px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #ffffff;
-    background: linear-gradient(180deg, #00c6eb 0%, #0098b8 100%);
-    border: none;
-    border-radius: 12px;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    top: 0;
-
-    /* 3D Shadow Layers */
-    box-shadow: 0 6px 0 #007088, 0 10px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.1s ease-in-out;
-}
-
-/* Hover State - Slightly pressed */
-.btn-3d:hover {
-    top: 2px;
-    background: linear-gradient(180deg, #1bd4f8 0%, #00a6ca 100%);
-    box-shadow: 0 4px 0 #007088, 0 6px 10px rgba(0, 0, 0, 0.18);
-}
-
-/* Active State - Fully pressed in 3D */
-.btn-3d:active {
-    top: 6px;
-    box-shadow: 0 0 0 #007088, 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 }
