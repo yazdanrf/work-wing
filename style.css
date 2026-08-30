@@ -80,7 +80,7 @@ body {
     gap: 2rem;
 }
 
-.nav-links a {
+.nav-links a:not(.btn-3d) {
     color: #475569;
     text-decoration: none;
     font-weight: 600;
@@ -88,7 +88,7 @@ body {
     transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:not(.btn-3d):hover {
     color: var(--navy-dark);
 }
 
@@ -108,53 +108,45 @@ body {
 }
 
 /* ==========================================================================
-   3D Animated Button System
+   3D Animated Button Styling (Forced Overrides for Link Elements)
    ========================================================================== */
 
-.btn-3d {
-    display: inline-block;
-    padding: 0.7rem 1.35rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
+a.btn-3d, .btn-3d {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.4rem !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
     color: #FFFFFF !important;
-    background-color: var(--electric-blue);
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    position: relative;
-    box-shadow: 0 4px 0 #007791, 0 6px 14px rgba(0, 0, 0, 0.15);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    background-color: var(--navy-dark) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    position: relative !important;
+    cursor: pointer !important;
+    box-shadow: 0 5px 0 #000000, 0 8px 15px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.12s ease-in-out !important;
     transform: translateY(0);
 }
 
-.btn-3d:hover {
-    background-color: #0096B4;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 0 #007791, 0 10px 18px rgba(0, 180, 216, 0.25);
+a.btn-3d:hover, .btn-3d:hover {
+    background-color: var(--electric-blue) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 7px 0 #007791, 0 12px 20px rgba(0, 180, 216, 0.35) !important;
 }
 
-.btn-3d:active {
-    transform: translateY(3px);
-    box-shadow: 0 1px 0 #007791, 0 2px 5px rgba(0, 0, 0, 0.15);
+a.btn-3d:active, .btn-3d:active {
+    transform: translateY(4px) !important;
+    box-shadow: 0 1px 0 #007791, 0 3px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Large 3D Button Variant for Hero & CTA */
-.btn-3d-lg {
-    padding: 0.95rem 2rem;
-    font-size: 1.05rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 0 #007791, 0 8px 18px rgba(0, 0, 0, 0.18);
-}
-
-.btn-3d-lg:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 0 #007791, 0 12px 22px rgba(0, 180, 216, 0.3);
-}
-
-.btn-3d-lg:active {
-    transform: translateY(4px);
-    box-shadow: 0 1px 0 #007791, 0 3px 6px rgba(0, 0, 0, 0.15);
+/* Large 3D Button Variant */
+a.btn-3d-lg, .btn-3d-lg {
+    padding: 1rem 2.2rem !important;
+    font-size: 1.05rem !important;
 }
 
 /* Hero Section */
@@ -305,10 +297,25 @@ body {
 .moving-banner { background-color: var(--cyan-banner); color: var(--navy-dark); padding: 5.5rem 0; }
 .moving-container { display: flex; justify-content: space-between; align-items: center; }
 .moving-title { font-family: 'Instrument Serif', Georgia, serif; font-size: 5rem; line-height: 0.95; font-weight: 400; }
-.moving-right { text-align: right; max-width: 450px; }
+.moving-right { text-align: right; max-width: 500px; }
 .moving-right p { font-size: 1.25rem; font-weight: 500; margin-bottom: 1.8rem; color: #043854; }
-.btn-moving { background: var(--navy-dark); color: #FFFFFF; padding: 0.85rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; transition: background 0.2s ease; }
-.btn-moving:hover { background: var(--navy-card); }
+
+.btn-moving {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy-dark);
+    color: #FFFFFF !important;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none !important;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.btn-moving:hover {
+    background: var(--navy-card);
+}
 
 .site-footer { background-color: var(--navy-deeper); color: #FFFFFF; padding: 4.5rem 0 3.5rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; }
